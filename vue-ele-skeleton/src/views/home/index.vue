@@ -2,7 +2,7 @@
  * @Author: Helijun
  * @Date: 2020-07-31 15:35:48
  * @LastEditors: Helijun
- * @LastEditTime: 2020-07-31 17:31:23
+ * @LastEditTime: 2020-08-04 14:23:44
  * @Description: 首页
 --> 
 <template>
@@ -112,10 +112,10 @@ export default {
   box-sizing: border-box;
   .header {
     height: 300px;
+    margin-bottom: 40px;
   }
   .swiper-list {
     height: 300px;
-    margin-bottom: 40px;
     .swiper-list-item {
       .swiper-list-item-img {
         width: 100%;
@@ -129,36 +129,42 @@ export default {
     .title {
       font-size: 30px;
       line-height: 1.2;
+      height: 36px;
       margin-bottom: 20px;
     }
   }
 
   .recommend-list {
     .recommend-list-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, 220px);
-      grid-row-gap: 20px;
-      // display: flex;
-      // flex-wrap: wrap;
-      justify-content: space-around;
+      // display: grid;
+      // grid-template-columns: repeat(auto-fill, 220px);
+      // grid-row-gap: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      // justify-content: space-around;
       .recommend-list-content-item {
         width: 220px;
         position: relative;
-        // margin-bottom: 20px;
+        margin-bottom: 20px;
         .recommend-list-content-item-img {
-          width: 100%;
-          height: 240px;
+          width: 220px;
+          height: 220px;
           border-radius: 8px;
           overflow: hidden;
+          margin-bottom: 10px;
           img {
             width: 100%;
           }
         }
         .recommend-list-content-item-name {
           font-size: 24px;
-          line-height: 1.2;
+          line-height: 34px;
           color: #666666;
           text-align: center;
+          height: 68px;
+          overflow: hidden;
+          width: 100%;
         }
         .recommend-list-content-item-tag {
           position: absolute;

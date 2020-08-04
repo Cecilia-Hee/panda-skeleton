@@ -3,6 +3,7 @@
     "target": "esnext",
     "module": "esnext",
     "strict": true,
+    "allowJs": true,// 可以包含js文件，
     "jsx": "preserve",
     "importHelpers": true,
     "moduleResolution": "node",
