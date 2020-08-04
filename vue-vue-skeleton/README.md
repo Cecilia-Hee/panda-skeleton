@@ -1,6 +1,6 @@
-# vue-ele-skeleton
+# vue-vue-skeleton
 
-利用饿了么出品的`page-skeleton-webpack-plugin`实现的骨架屏，
+利用vue-skeleton-webpack-plugin实现骨架屏
 
 ## Project setup
 ```
