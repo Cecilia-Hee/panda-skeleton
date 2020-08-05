@@ -2,7 +2,7 @@
  * @Author: Helijun
  * @Date: 2020-08-05 15:41:12
  * @LastEditors: Helijun
- * @LastEditTime: 2020-08-05 15:57:38
+ * @LastEditTime: 2020-08-05 16:38:01
  * @Description: 植入JavaScript代码
  */ 
 
@@ -23,12 +23,19 @@ const invadeCode = async function() {
   //   crypto.createHash('md5').update(text).digest('hex')
   // })
 
+  // 注入js脚本
+  await page.addScriptTag({
+    content: "console.log('add script tag')"
+  })
+
   // 执行脚本
   await page.evaluate(async () => {
     const myHash = await window.encodeURIComponent('PUPPETEER');
     const myString = '123456'
     console.log(`md5 of ${myString} is ${myHash}`)
   })
+
+
 
   await sleep(500000)
 
