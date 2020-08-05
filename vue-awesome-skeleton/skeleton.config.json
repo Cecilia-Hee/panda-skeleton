@@ -6,7 +6,7 @@
   "minGrayBlockWidth": 80,
   "minGrayPseudoWidth": 10,
   "debug": true,
-  "debugTime": 1000000,
+  "debugTime": 10000,
   "cookies": [
     {
       "domain": ".baidu.com",
