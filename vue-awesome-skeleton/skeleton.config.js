@@ -1,7 +1,8 @@
-{
-  "pageName": "home",
-  "outputPath": "skeleton-output/home",
-  "pageUrl": "http://10.2.26.144:8080/#/",
+
+module.exports = {
+  "pageName": process.env.npm_config_pagename,
+  "outputPath": `skeleton-output/${process.env.npm_config_pagename}`,
+  "pageUrl": process.env.npm_config_pageurl || 'http://10.2.26.144:8082/#/',
   "openRepeatList": true,
   "device": "iPhone 6",
   "minGrayBlockWidth": 80,
