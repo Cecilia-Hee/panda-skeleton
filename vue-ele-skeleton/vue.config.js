@@ -33,7 +33,7 @@ module.exports = {
           // excludes: ['.mint-swipe-items-wrap a']
         },
         defer: 5000,
-        device: 'iPhone 6',
+        // device: 'iPhone 6',
         // minify: {
         //   minifyCSS: { level: 2 },
         //   removeComments: true,

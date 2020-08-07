@@ -1,5 +1,5 @@
 {
-  "name": "vue-ele-skeleton",
+  "name": "vue-awesome-skeleton",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -38,6 +38,7 @@
     "awesome-skeleton": "^0.1.4",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "html-webpack-plugin": "^4.3.0",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
     "postcss-aspect-ratio-mini": "^1.0.1",
