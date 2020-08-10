@@ -16,7 +16,7 @@ module.exports = {
         quiet: true,
         // 根据路由显示骨架屏, router 的配置决定了我们各个路由路径所对应的骨架屏。
         router: {
-          mode: 'history',
+          mode: 'hash',
           routes: [
             // 其中 path 对应着页面在 vue-router 中的 path ，skeletonId 是骨架屏的 id，后面马上会说明
               {

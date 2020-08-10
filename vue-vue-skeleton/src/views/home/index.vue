@@ -2,7 +2,7 @@
  * @Author: Helijun
  * @Date: 2020-07-31 15:35:48
  * @LastEditors: Helijun
- * @LastEditTime: 2020-08-04 16:27:32
+ * @LastEditTime: 2020-08-10 17:19:45
  * @Description: 首页
 --> 
 <template>
@@ -21,7 +21,7 @@
     <div class="box-wrapper recommend-list">
       <div class="title">推荐歌单</div>
       <div class="recommend-list-content">
-        <div class="recommend-list-content-item" v-for="(item, index) in recommendList" :key="index" @click="gotoDetail(item)">
+        <div class="recommend-list-content-item" v-for="(item, index) in recommendList" :key="index">
           <div class="recommend-list-content-item-img">
             <img :src="item.picUrl" />
           </div>
@@ -32,6 +32,10 @@
         </div>
         
       </div>
+    </div>
+    <div class="bottom">
+      <div class="tab active">首页</div>
+      <div class="tab "  @click="gotoIndex">个人中心</div>
     </div>
   </div>
 </template>
@@ -101,12 +105,18 @@ export default {
       })
     },
 
-    gotoDetail(item) {
+    // gotoDetail(item) {
+    //   this.$router.push({
+    //     path: '/detail',
+    //     query: {
+    //       item: JSON.stringify(item)
+    //     }
+    //   })
+    // },
+
+    gotoIndex() {
       this.$router.push({
-        path: '/detail',
-        query: {
-          item: JSON.stringify(item)
-        }
+        path: '/detail'
       })
     }
 
@@ -186,4 +196,25 @@ export default {
     }
   }
 }
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    box-shadow: 0 2px 15px 0px gray;
+    background: #ffffff;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .tab {
+      width: 50%;
+      text-align: center;
+      &.active {
+        color: RGBA(254,90,53,1.00);
+      }
+    }
+  }
 </style>

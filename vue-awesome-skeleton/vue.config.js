@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 // 读文件
 let tpl2 = ''
-const filePath = path.join(__dirname, './skeleton-output/skeleton-home.html');
+const filePath = path.join(__dirname, './skeleton-output/home/skeleton-home.html');
 console.log('filepath:', filePath)
 try {
   // 判断文件是否存在

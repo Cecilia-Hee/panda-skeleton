@@ -5,10 +5,11 @@ module.exports = {
   "pageUrl": process.env.npm_config_pageurl || 'http://10.2.26.144:8082/#/',
   "openRepeatList": true,
   "device": "iPhone 6",
-  "minGrayBlockWidth": 80,
+  "minGrayBlockWidth": 14,
   "minGrayPseudoWidth": 10,
   "debug": true,
   "debugTime": 10000,
+  "autoDestroy": false,
   "cookies": [
     {
       "domain": ".baidu.com",

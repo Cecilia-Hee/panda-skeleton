@@ -2,11 +2,12 @@
  * @Author: Helijun
  * @Date: 2020-08-10 14:27:49
  * @LastEditors: Helijun
- * @LastEditTime: 2020-08-10 17:18:12
+ * @LastEditTime: 2020-08-10 18:53:14
  * @Description: 
 --> 
 <template>
-  <div class="page">
+  <div class="page" v-if="playList.length > 0">
+  <!-- <div class="page"> -->
     <div class="header">
       <div class="bg"  :style="{backgroundImage: `url(${profile.backgroundUrl})`}"></div>
       <div class="top">
@@ -78,14 +79,14 @@ export default {
   methods: {
     init() {
       axios.get(`${baseUrl}/user/detail?uid=32953014`).then((res) => {
-        console.log(res)
+        // console.log(res)
         const {profile} = res && res.data
         this.profile = profile
       })
     },
     getPlayList() {
       axios.get(`${baseUrl}/user/playlist?uid=32953014`).then((res) => {
-        console.log(res)
+        // console.log(res)
         const { playlist } = res && res.data
         this.playList = playlist
       })

@@ -2,11 +2,11 @@
  * @Author: Helijun
  * @Date: 2020-07-31 15:35:48
  * @LastEditors: Helijun
- * @LastEditTime: 2020-08-04 17:36:54
+ * @LastEditTime: 2020-08-10 18:33:00
  * @Description: 首页
 --> 
 <template>
-  <div class="page index-page">
+  <div class="page index-page" v-if="recommendList.length > 0">
     <div class="header">
       <swiper :options="swiperOption" ref="mySwiper" class="swiper-list">
         <swiper-slide v-for="(item, index) in bannerList" :key="index">
@@ -33,6 +33,11 @@
         
       </div>
     </div>
+
+    <div class="bottom">
+      <div class="tab active">首页</div>
+      <div class="tab" @click="gotoUser">个人中心</div>
+    </div>
   </div>
 </template>
 
@@ -40,6 +45,10 @@
 import axios from 'axios'
 import 'swiper/swiper-bundle.css';
 import { Swiper, SwiperSlide, directive } from 'vue-awesome-swiper'
+
+// import aa from '../../../skeleton-output/home/skeleton-home.png'
+
+// console.log(aa)
 
 const baseUrl = "https://music.lsqy.tech/api";
 
@@ -80,6 +89,12 @@ export default {
   created() {
     this.getBannerList();
     this.getRecomendList();
+
+    const aa = import('../../../skeleton-output/home/skeleton-home.png').then((res) => {
+      console.log(res.default)
+
+    })
+    
   },
 
   methods: {
@@ -89,6 +104,7 @@ export default {
         const { banners } = res && res.data
         this.bannerList = banners;
         console.log(this.bannerList)
+        // window.SKELETON && window.SKELETON.destroy();
       }).catch((e) => {
         console.log(e)
       })
@@ -98,6 +114,12 @@ export default {
       axios.get(`${baseUrl}/personalized`).then((res) => {
         const { result } = res && res.data
         this.recommendList = result;
+      })
+    },
+
+    gotoUser() {
+      this.$router.push({
+        path: '/user'
       })
     }
 
@@ -174,6 +196,27 @@ export default {
           font-size: 20px;
           color: #ffffff;
         }
+      }
+    }
+  }
+
+  .bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    box-shadow: 0 2px 15px 0px gray;
+    background: #ffffff;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .tab {
+      width: 50%;
+      text-align: center;
+      &.active {
+        color: RGBA(254,90,53,1.00);
       }
     }
   }
