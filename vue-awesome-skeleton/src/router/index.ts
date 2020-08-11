@@ -18,8 +18,8 @@ Vue.use(VueRouter)
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => lazyLoadView(import(/* webpackChunkName: "detail" */ '../views/user/index.vue'))
-    // component: () => import(/* webpackChunkName: "detail" */ '../views/user/index.vue')
+    // component: () => lazyLoadView(import(/* webpackChunkName: "detail" */ '../views/user/index.vue'))
+    component: () => import(/* webpackChunkName: "detail" */ '../views/user/index.vue')
   }
 ]
 

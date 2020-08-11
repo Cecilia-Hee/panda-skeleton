@@ -7,8 +7,8 @@ module.exports = {
       new SkeletonPlugin({
         pathname: path.resolve(__dirname, './shell/'), // 生成的骨架屏的地址
         staticDir: path.resolve(__dirname, './dist'), // 最好的output.path一致
-        routes: ['/'],  // 需要生成骨架屏的页面， 这里只能是首页，如果是多入口，只要将多入口的首页配置在这里就可以了
-        port: '7890',
+        routes: ['/', '/user'],  // 需要生成骨架屏的页面， 这里只能是首页，如果是多入口，只要将多入口的首页配置在这里就可以了
+        port: '7891',
         loading: 'chiaroscuro',
         // text: {
         //   color: 'red'

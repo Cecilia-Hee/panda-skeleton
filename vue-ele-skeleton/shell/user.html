@@ -1,0 +1,432 @@
+<style>
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50
+  }
+
+  body,
+  html {
+    padding: 0;
+    margin: 0
+  }
+
+  @font-face {
+    font-family: 'swiper-icons';
+    src: url('data:application/font-woff;charset=utf-8;base64, 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') format('woff');
+    font-weight: 400;
+    font-style: normal
+  }
+
+  :root {}
+
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-family: swiper-icons;
+    font-size: 1.17333rem;
+    text-transform: none !important;
+    letter-spacing: 0;
+    text-transform: none;
+    -webkit-font-feature-settings: ;
+    font-feature-settings: ;
+    font-variant: normal;
+    font-variant: initial;
+    line-height: 1
+  }
+
+  .swiper-button-prev:after,
+  .swiper-container-rtl .swiper-button-next:after {
+    content: 'prev'
+  }
+
+  .swiper-button-next:after,
+  .swiper-container-rtl .swiper-button-prev:after {
+    content: 'next'
+  }
+
+  :root {}
+
+  :root {}
+
+  @-webkit-keyframes swiper-preloader-spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg)
+    }
+  }
+
+  @keyframes swiper-preloader-spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg)
+    }
+  }
+
+
+  .page[data-v-4498f7b0] {
+    padding-bottom: 2.66667rem
+  }
+
+  .header[data-v-4498f7b0] {
+    height: 11.2rem;
+    padding: 1.33333rem 1.06667rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 0.8rem;
+    color: #ffffff
+  }
+
+  .header .bg[data-v-4498f7b0] {
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="30" /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.8" /><feFuncG type="linear" slope="0.8" /><feFuncB type="linear" slope="0.8" /></feComponentTransfer></filter></svg>#filter');
+    -webkit-filter: blur(0.8rem) brightness(0.8);
+    filter: blur(0.8rem) brightness(0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1
+  }
+
+  .header .top[data-v-4498f7b0] {
+    text-align: center;
+    margin-bottom: 1.06667rem
+  }
+
+  .header .top .avater[data-v-4498f7b0] {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 3.2rem;
+    overflow: hidden;
+    margin: 0 auto 0.53333rem
+  }
+
+  .header .top .avater img[data-v-4498f7b0] {
+    width: 100%
+  }
+
+  .header .top .nickname[data-v-4498f7b0] {
+    font-size: 0.8rem
+  }
+
+  .header .top .nickname div[data-v-4498f7b0]:first-of-type {
+    font-size: 1.06667rem;
+    font-weight: 500;
+    margin-bottom: 0.26667rem
+  }
+
+  .header .fn-list[data-v-4498f7b0] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+  }
+
+  .header .fn-list .item[data-v-4498f7b0] {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: center;
+    font-size: 0.64rem
+  }
+
+  .header .fn-list .item div[data-v-4498f7b0]:first-of-type {
+    width: 0.74667rem;
+    height: 0.74667rem;
+    background: rgba(254, 255, 253, .4);
+    margin: 0 auto 0.26667rem
+  }
+
+  .list-wrapper[data-v-4498f7b0] {
+    padding: 0.53333rem 1.06667rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+  }
+
+  .list-wrapper .title[data-v-4498f7b0] {
+    font-size: 0.74667rem;
+    line-height: 1.2;
+    margin-bottom: 0.53333rem
+  }
+
+  .list-wrapper .list[data-v-4498f7b0] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+  }
+
+  .list-wrapper .list .item[data-v-4498f7b0] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 48%;
+    margin-right: 0.26667rem;
+    margin-bottom: 1.06667rem
+  }
+
+  .list-wrapper .list .item .left[data-v-4498f7b0] {
+    width: 2.66667rem;
+    height: 2.66667rem;
+    margin-right: 0.53333rem;
+    border-radius: 0.21333rem;
+    overflow: hidden;
+    -ms-flex-negative: 0;
+    flex-shrink: 0
+  }
+
+  .list-wrapper .list .item .left img[data-v-4498f7b0] {
+    width: 100%
+  }
+
+  .list-wrapper .list .item .right[data-v-4498f7b0] {
+    font-size: 0.64rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+  }
+
+  .bottom[data-v-4498f7b0] {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3.2rem;
+    -webkit-box-shadow: 0 0.05333rem 0.4rem 0 gray;
+    box-shadow: 0 0.05333rem 0.4rem 0 gray;
+    background: #ffffff;
+    font-size: 0.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around
+  }
+
+  .bottom .tab[data-v-4498f7b0] {
+    width: 50%;
+    text-align: center
+  }
+
+  .bottom .tab.active[data-v-4498f7b0] {
+    color: #fe5a35
+  }
+
+  .sk-transparent {
+    color: transparent !important
+  }
+
+  .sk-opacity {
+    opacity: 0 !important
+  }
+
+  .sk-text-14-2857 {
+    background-image: linear-gradient(transparent 14.2857%, #EEEEEE 0%, #EEEEEE 85.7143%, transparent 0%) !important;
+    background-size: 100% 1.4933rem;
+    position: relative !important
+  }
+
+  .sk-text {
+    background-origin: content-box !important;
+    background-clip: content-box !important;
+    background-color: transparent !important;
+    color: transparent !important;
+    background-repeat: repeat-y !important
+  }
+
+  .sk-text-8-3333 {
+    background-image: linear-gradient(transparent 8.3333%, #EEEEEE 0%, #EEEEEE 91.6667%, transparent 0%) !important;
+    background-size: 100% 0.8960rem;
+    position: relative !important
+  }
+
+  .sk-image {
+    background: #EFEFEF !important
+  }
+
+  .sk-rect {
+    border-radius: 0
+  }
+
+  .sk-pseudo::before,
+  .sk-pseudo::after {
+    background: #EFEFEF !important;
+    background-image: none !important;
+    color: transparent !important;
+    border-color: transparent !important
+  }
+
+  .sk-pseudo-rect::before,
+  .sk-pseudo-rect::after {
+    border-radius: 0 !important
+  }
+
+  .sk-pseudo-circle::before,
+  .sk-pseudo-circle::after {
+    border-radius: 50% !important
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: .4
+    }
+
+    50% {
+      opacity: 1
+    }
+
+    100% {
+      opacity: .4
+    }
+  }
+
+  .blink {
+    animation-duration: 2s;
+    animation-name: blink;
+    animation-iteration-count: infinite
+  }
+
+</style>
+
+
+<div id="app" class="sk-pseudo sk-pseudo-circle blink">
+  <div data-v-4498f7b0="" class="page sk-pseudo sk-pseudo-circle">
+    <div data-v-4498f7b0="" class="header sk-pseudo sk-pseudo-circle">
+      <div data-v-4498f7b0="" class="bg sk-image sk-rect sk-pseudo sk-pseudo-circle" style="background-image: url('http://p1.music.126.net/WLTBvNL_l9ZKlslFwaCM9Q==/109951163792144631.jpg');"></div>
+      <div data-v-4498f7b0="" class="top sk-pseudo sk-pseudo-circle">
+        <div data-v-4498f7b0="" class="avater sk-pseudo sk-pseudo-circle"><img data-v-4498f7b0="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="66.234375" height="66.234375" class="sk-image sk-rect sk-pseudo sk-pseudo-circle"></div>
+        <div data-v-4498f7b0="" class="nickname sk-pseudo sk-pseudo-circle">
+          <div data-v-4498f7b0="" class="sk-transparent sk-text-14-2857 sk-text sk-pseudo sk-pseudo-circle" style="background-size: 21.8842% 1.4933rem; background-position-x: 50%;">binaryify</div>
+          <div data-v-4498f7b0="" class="sk-transparent sk-text-14-2857 sk-text sk-pseudo sk-pseudo-circle" style="background-size: 31.3435% 1.12rem; background-position-x: 50%;">深圳市爱猫人士</div>
+        </div>
+      </div>
+      <div data-v-4498f7b0="" class="fn-list sk-pseudo sk-pseudo-circle">
+        <div data-v-4498f7b0="" class="item sk-pseudo sk-pseudo-circle">
+          <div data-v-4498f7b0="" class="sk-pseudo sk-pseudo-circle"></div>
+          <div data-v-4498f7b0="" class="sk-transparent sk-text-14-2857 sk-text sk-pseudo sk-pseudo-circle" style="background-size: 57.2829% 0.896rem; background-position-x: 50%;">本地音乐</div>
+        </div>
+        <div data-v-4498f7b0="" class="item sk-pseudo sk-pseudo-circle">
+          <div data-v-4498f7b0="" class="sk-pseudo sk-pseudo-circle"></div>
+          <div data-v-4498f7b0="" class="sk-transparent sk-text-14-2857 sk-text sk-pseudo sk-pseudo-circle" style="background-size: 57.2829% 0.896rem; background-position-x: 50%;">下载管理</div>
+        </div>
+        <div data-v-4498f7b0="" class="item sk-pseudo sk-pseudo-circle">
+          <div data-v-4498f7b0="" class="sk-pseudo sk-pseudo-circle"></div>
+          <div data-v-4498f7b0="" class="sk-transparent sk-text-14-2857 sk-text sk-pseudo sk-pseudo-circle" style="background-size: 28.6414% 0.896rem; background-position-x: 50%;">电台</div>
+        </div>
+        <div data-v-4498f7b0="" class="item sk-pseudo sk-pseudo-circle">
+          <div data-v-4498f7b0="" class="sk-pseudo sk-pseudo-circle"></div>
+          <div data-v-4498f7b0="" class="sk-transparent sk-text-14-2857 sk-text sk-pseudo sk-pseudo-circle" style="background-size: 57.2829% 0.896rem; background-position-x: 50%;">我的收藏</div>
+        </div>
+      </div>
+    </div>
+    <div data-v-4498f7b0="" class="list-wrapper sk-pseudo sk-pseudo-circle">
+      <div data-v-4498f7b0="" class="title sk-transparent sk-text-8-3333 sk-text sk-pseudo sk-pseudo-circle" style="background-size: 16.7131% 0.896rem;">我的歌单</div>
+      <div data-v-4498f7b0="" class="list sk-pseudo sk-pseudo-circle">
+        <div data-v-4498f7b0="" class="item sk-pseudo sk-pseudo-circle">
+          <div data-v-4498f7b0="" class="left sk-pseudo sk-pseudo-circle"><img data-v-4498f7b0="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="55.1875" height="55.1875" class="sk-image sk-rect sk-pseudo sk-pseudo-circle"></div>
+          <div data-v-4498f7b0="" class="right sk-pseudo sk-pseudo-circle">
+            <div data-v-4498f7b0="" class="list-name sk-transparent sk-text-14-2857 sk-text sk-pseudo sk-pseudo-circle">binaryify喜欢的音乐<span style="display: inline-block; width: 50%; background: rgb(255, 255, 255); position: absolute; bottom: 0px; right: 0px;"></span></div>
+            <div data-v-4498f7b0="" class="total sk-transparent sk-text-14-2857 sk-text sk-pseudo sk-pseudo-circle" style="background-size: 29.7487% 0.896rem;">871首</div>
+          </div>
+        </div>
+        <div data-v-4498f7b0="" class="item sk-pseudo sk-pseudo-circle">
+          <div data-v-4498f7b0="" class="left sk-pseudo sk-pseudo-circle"><img data-v-4498f7b0="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="55.1875" height="55.1875" class="sk-image sk-rect sk-pseudo sk-pseudo-circle"></div>
+          <div data-v-4498f7b0="" class="right sk-pseudo sk-pseudo-circle">
+            <div data-v-4498f7b0="" class="list-name sk-transparent sk-text-14-2857 sk-text sk-pseudo sk-pseudo-circle">binaryify的2019年度歌单<span style="display: inline-block; width: 50%; background: rgb(255, 255, 255); position: absolute; bottom: 0px; right: 0px;"></span></div>
+            <div data-v-4498f7b0="" class="total sk-transparent sk-text-14-2857 sk-text sk-pseudo sk-pseudo-circle" style="background-size: 17.8576% 0.896rem;">6首</div>
+          </div>
+        </div>
+        <div data-v-4498f7b0="" class="item sk-pseudo sk-pseudo-circle">
+          <div data-v-4498f7b0="" class="left sk-pseudo sk-pseudo-circle"><img data-v-4498f7b0="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="55.1875" height="55.1875" class="sk-image sk-rect sk-pseudo sk-pseudo-circle"></div>
+          <div data-v-4498f7b0="" class="right sk-pseudo sk-pseudo-circle">
+            <div data-v-4498f7b0="" class="list-name sk-transparent sk-text-14-2857 sk-text sk-pseudo sk-pseudo-circle">binaryify的年度歌单<span style="display: inline-block; width: 50%; background: rgb(255, 255, 255); position: absolute; bottom: 0px; right: 0px;"></span></div>
+            <div data-v-4498f7b0="" class="total sk-transparent sk-text-14-2857 sk-text sk-pseudo sk-pseudo-circle" style="background-size: 23.3609% 0.896rem;">11首</div>
+          </div>
+        </div>
+        <div data-v-4498f7b0="" class="item sk-pseudo sk-pseudo-circle">
+          <div data-v-4498f7b0="" class="left sk-pseudo sk-pseudo-circle"><img data-v-4498f7b0="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="55.1875" height="55.1875" class="sk-image sk-rect sk-pseudo sk-pseudo-circle"></div>
+          <div data-v-4498f7b0="" class="right sk-pseudo sk-pseudo-circle">
+            <div data-v-4498f7b0="" class="list-name sk-transparent sk-text-14-2857 sk-text sk-pseudo sk-pseudo-circle" style="background-size: 96.4754% 0.896rem;">X (Deluxe Edition)</div>
+            <div data-v-4498f7b0="" class="total sk-transparent sk-text-14-2857 sk-text sk-pseudo sk-pseudo-circle" style="background-size: 24.9963% 0.896rem;">17首</div>
+          </div>
+        </div>
+        <div data-v-4498f7b0="" class="item sk-pseudo sk-pseudo-circle">
+          <div data-v-4498f7b0="" class="left sk-pseudo sk-pseudo-circle"><img data-v-4498f7b0="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="55.1875" height="55.1875" class="sk-image sk-rect sk-pseudo sk-pseudo-circle"></div>
+          <div data-v-4498f7b0="" class="right sk-pseudo sk-pseudo-circle">
+            <div data-v-4498f7b0="" class="list-name sk-transparent sk-opacity sk-pseudo sk-pseudo-circle">song</div>
+            <div data-v-4498f7b0="" class="total sk-transparent sk-opacity sk-pseudo sk-pseudo-circle">19首</div>
+          </div>
+        </div>
+        <div data-v-4498f7b0="" class="item sk-pseudo sk-pseudo-circle">
+          <div data-v-4498f7b0="" class="left sk-pseudo sk-pseudo-circle"><img data-v-4498f7b0="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="55.1875" height="55.1875" class="sk-image sk-rect sk-pseudo sk-pseudo-circle"></div>
+          <div data-v-4498f7b0="" class="right sk-pseudo sk-pseudo-circle">
+            <div data-v-4498f7b0="" class="list-name sk-transparent sk-text-14-2857 sk-text sk-pseudo sk-pseudo-circle" style="background-size: 93.0374% 0.896rem;">Myths &amp; Legends</div>
+            <div data-v-4498f7b0="" class="total sk-transparent sk-text-14-2857 sk-text sk-pseudo sk-pseudo-circle" style="background-size: 19.3372% 0.896rem;">4首</div>
+          </div>
+        </div>
+        <div data-v-4498f7b0="" class="item sk-pseudo sk-pseudo-circle">
+          <div data-v-4498f7b0="" class="left sk-pseudo sk-pseudo-circle"><img data-v-4498f7b0="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="55.1875" height="55.1875" class="sk-image sk-rect sk-pseudo sk-pseudo-circle"></div>
+          <div data-v-4498f7b0="" class="right sk-pseudo sk-pseudo-circle">
+            <div data-v-4498f7b0="" class="list-name sk-transparent sk-opacity sk-pseudo sk-pseudo-circle">歌单</div>
+            <div data-v-4498f7b0="" class="total sk-transparent sk-opacity sk-pseudo sk-pseudo-circle">155首</div>
+          </div>
+        </div>
+        <div data-v-4498f7b0="" class="item sk-pseudo sk-pseudo-circle">
+          <div data-v-4498f7b0="" class="left sk-pseudo sk-pseudo-circle"><img data-v-4498f7b0="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="55.1875" height="55.1875" class="sk-image sk-rect sk-pseudo sk-pseudo-circle"></div>
+          <div data-v-4498f7b0="" class="right sk-pseudo sk-pseudo-circle">
+            <div data-v-4498f7b0="" class="list-name sk-transparent sk-opacity sk-pseudo sk-pseudo-circle">音乐</div>
+            <div data-v-4498f7b0="" class="total sk-transparent sk-opacity sk-pseudo sk-pseudo-circle">2首</div>
+          </div>
+        </div>
+        <div data-v-4498f7b0="" class="item sk-pseudo sk-pseudo-circle">
+          <div data-v-4498f7b0="" class="left sk-pseudo sk-pseudo-circle"><img data-v-4498f7b0="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="55.1875" height="55.1875" class="sk-image sk-rect sk-pseudo sk-pseudo-circle"></div>
+          <div data-v-4498f7b0="" class="right sk-pseudo sk-pseudo-circle">
+            <div data-v-4498f7b0="" class="list-name sk-transparent sk-text-14-2857 sk-text sk-pseudo sk-pseudo-circle" style="background-size: 91.0455% 0.896rem;">Flames of Fame</div>
+            <div data-v-4498f7b0="" class="total sk-transparent sk-text-14-2857 sk-text sk-pseudo sk-pseudo-circle" style="background-size: 27.7472% 0.896rem;">11首</div>
+          </div>
+        </div>
+        <div data-v-4498f7b0="" class="item sk-pseudo sk-pseudo-circle">
+          <div data-v-4498f7b0="" class="left sk-pseudo sk-pseudo-circle"><img data-v-4498f7b0="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="55.1875" height="55.1875" class="sk-image sk-rect sk-pseudo sk-pseudo-circle"></div>
+          <div data-v-4498f7b0="" class="right sk-pseudo sk-pseudo-circle">
+            <div data-v-4498f7b0="" class="list-name sk-transparent sk-text-14-2857 sk-text sk-pseudo sk-pseudo-circle" style="background-size: 90.8178% 0.896rem;">Things We've Said</div>
+            <div data-v-4498f7b0="" class="total sk-transparent sk-text-14-2857 sk-text sk-pseudo sk-pseudo-circle" style="background-size: 18.2496% 0.896rem;">7首</div>
+          </div>
+        </div>
+        <div data-v-4498f7b0="" class="item sk-pseudo sk-pseudo-circle">
+          <div data-v-4498f7b0="" class="left sk-pseudo sk-pseudo-circle"><img data-v-4498f7b0="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="55.1875" height="55.1875" class="sk-image sk-rect sk-pseudo sk-pseudo-circle"></div>
+          <div data-v-4498f7b0="" class="right sk-pseudo sk-pseudo-circle">
+            <div data-v-4498f7b0="" class="list-name sk-transparent sk-opacity sk-pseudo sk-pseudo-circle">Illusions</div>
+            <div data-v-4498f7b0="" class="total sk-transparent sk-opacity sk-pseudo sk-pseudo-circle">19首</div>
+          </div>
+        </div>
+        <div data-v-4498f7b0="" class="item sk-pseudo sk-pseudo-circle">
+          <div data-v-4498f7b0="" class="left sk-pseudo sk-pseudo-circle"><img data-v-4498f7b0="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="55.1875" height="55.1875" class="sk-image sk-rect sk-pseudo sk-pseudo-circle"></div>
+          <div data-v-4498f7b0="" class="right sk-pseudo sk-pseudo-circle">
+            <div data-v-4498f7b0="" class="list-name sk-transparent sk-text-14-2857 sk-text sk-pseudo sk-pseudo-circle" style="background-size: 95.4564% 0.896rem;">Lana Del Rey</div>
+            <div data-v-4498f7b0="" class="total sk-transparent sk-text-14-2857 sk-text sk-pseudo sk-pseudo-circle" style="background-size: 25.8012% 0.896rem;">7首</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div data-v-4498f7b0="" class="bottom sk-pseudo sk-pseudo-circle">
+      <div data-v-4498f7b0="" class="tab sk-transparent sk-text-14-2857 sk-text sk-pseudo sk-pseudo-circle" style="background-size: 4.0006% 1.12rem; background-position-x: 50%;">首页</div>
+      <div data-v-4498f7b0="" class="tab active sk-transparent sk-text-14-2857 sk-text sk-pseudo sk-pseudo-circle" style="background-size: 8.00121% 1.12rem; background-position-x: 50%;">个人中心</div>
+    </div>
+  </div>
+</div>
+<!-- built files will be auto injected -->
