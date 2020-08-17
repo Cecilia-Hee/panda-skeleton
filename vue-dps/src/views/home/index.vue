@@ -2,11 +2,11 @@
  * @Author: Helijun
  * @Date: 2020-07-31 15:35:48
  * @LastEditors: Helijun
- * @LastEditTime: 2020-08-04 17:36:54
+ * @LastEditTime: 2020-08-11 18:14:40
  * @Description: 首页
 --> 
 <template>
-  <div class="page index-page">
+  <div class="page index-page" id="index">
     <div class="header">
       <swiper :options="swiperOption" ref="mySwiper" class="swiper-list">
         <swiper-slide v-for="(item, index) in bannerList" :key="index">
@@ -32,6 +32,11 @@
         </div>
         
       </div>
+    </div>
+
+    <div class="bottom">
+      <div class="tab active">首页</div>
+      <div class="tab" @click="gotoIndex">个人中心</div>
     </div>
   </div>
 </template>
@@ -98,6 +103,12 @@ export default {
       axios.get(`${baseUrl}/personalized`).then((res) => {
         const { result } = res && res.data
         this.recommendList = result;
+      })
+    },
+
+    gotoIndex() {
+      this.$router.push({
+        path: '/user'
       })
     }
 
@@ -178,4 +189,25 @@ export default {
     }
   }
 }
+.bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    box-shadow: 0 2px 15px 0px gray;
+    background: #ffffff;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .tab {
+      width: 50%;
+      text-align: center;
+      &.active {
+        color: RGBA(254,90,53,1.00);
+      }
+    }
+  }
+
 </style>
