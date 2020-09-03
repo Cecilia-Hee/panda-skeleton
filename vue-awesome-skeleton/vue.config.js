@@ -6,14 +6,14 @@ const fs = require('fs')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 // // 读文件
-let tpl2 = ''
+let skeletonTpl = ''
 const filePath = path.join(__dirname, './skeleton-output/home/skeleton-home.html');
 console.log('filepath:', filePath)
 try {
   // 判断文件是否存在
   const stat = fs.statSync(filePath)
   console.log('stat:', stat)
-  tpl2 = fs.readFileSync(filePath, 'utf-8');
+  skeletonTpl = fs.readFileSync(filePath, 'utf-8');
 } catch (err) {
   console.log('err', '文件不存在')
 }
@@ -28,7 +28,7 @@ module.exports = {
   chainWebpack: config => {
     config.plugin('html').tap(args => {
       args[0].title = '依然范特西'
-      args[0].hasSkeleton = tpl2
+      args[0].hasSkeleton = skeletonTpl
       return args
     }) 
   }
