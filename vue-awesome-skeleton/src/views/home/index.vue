@@ -2,7 +2,7 @@
  * @Author: Helijun
  * @Date: 2020-07-31 15:35:48
  * @LastEditors: Helijun
- * @LastEditTime: 2020-08-10 18:33:00
+ * @LastEditTime: 2020-09-03 19:04:52
  * @Description: 首页
 --> 
 <template>
@@ -43,7 +43,6 @@
 
 <script>
 import axios from 'axios'
-import 'swiper/swiper-bundle.css';
 import { Swiper, SwiperSlide, directive } from 'vue-awesome-swiper'
 
 // import aa from '../../../skeleton-output/home/skeleton-home.png'
@@ -128,6 +127,8 @@ export default {
 </script>
 
 <style lang="less" scoped>
+// import 'swiper/swiper-bundle.css';
+@import url('swiper/swiper-bundle.css');
 .index-page {
   min-height: 100vh;
   padding: 20px 30px;

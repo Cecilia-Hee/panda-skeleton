@@ -7,7 +7,7 @@ Vue.use(VueRouter)
 
   const routes: Array<RouteConfig> = [
   {
-    path: '/',
+    path: '/home',
     name: 'Home',
     // component: () => lazyLoadView(import('../views/home/index.vue'))
     component: Home
@@ -20,6 +20,9 @@ Vue.use(VueRouter)
     // which is lazy-loaded when the route is visited.
     // component: () => lazyLoadView(import(/* webpackChunkName: "detail" */ '../views/user/index.vue'))
     component: () => import(/* webpackChunkName: "detail" */ '../views/user/index.vue')
+  }, {
+    path: '*',
+    redirect: '/home'
   }
 ]
 

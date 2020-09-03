@@ -4,19 +4,29 @@
 const path = require('path')
 const fs = require('fs')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const autoSkeleton = require('./auto-skeleton/index')
+
+let tpl = ''
+
+autoSkeleton(['user'], 'hash', function(res) {
+  console.log("==================")
+  tpl = res;
+})
+
+// console.log("tpl", tpl)
 
 // // 读文件
-let skeletonTpl = ''
-const filePath = path.join(__dirname, './skeleton-output/home/skeleton-home.html');
-console.log('filepath:', filePath)
-try {
-  // 判断文件是否存在
-  const stat = fs.statSync(filePath)
-  console.log('stat:', stat)
-  skeletonTpl = fs.readFileSync(filePath, 'utf-8');
-} catch (err) {
-  console.log('err', '文件不存在')
-}
+// let skeletonTpl = ''
+// const filePath = path.join(__dirname, './skeleton-output/home/skeleton-home.html');
+// console.log('filepath:', filePath)
+// try {
+//   // 判断文件是否存在
+//   const stat = fs.statSync(filePath)
+//   console.log('stat:', stat)
+//   skeletonTpl = fs.readFileSync(filePath, 'utf-8');
+// } catch (err) {
+//   console.log('err', '文件不存在')
+// }
 
 // const tpl = `<style>@keyframes flush{0%{left:-100%}50%{left:0}100%{left:100%}}</style>
 // <div class="skeleton-remove-after-first-request" style="animation:flush 2s linear infinite;position:absolute;top:0;bottom:0;width:100%;z-index:9999;background:linear-gradient(to left,rgba(255,255,255,0) 0,rgba(255,255,255,.85) 50%,rgba(255,255,255,0) 100%)"></div>  
@@ -24,11 +34,13 @@ try {
 // <script class="skeleton-remove-after-first-request">window.SKELETON={destroy:function(){for(var e=document.body.querySelectorAll(".skeleton-remove-after-first-request"),o=0;o<e.length;o++){var t=e[o];t&&document.body.removeChild(t)}}},window.addEventListener("load",function(){setTimeout(function(){window.SKELETON&&SKELETON.destroy()},0)})</script>
 // `
 
+
+
 module.exports = {
   chainWebpack: config => {
     config.plugin('html').tap(args => {
       args[0].title = '依然范特西'
-      args[0].hasSkeleton = skeletonTpl
+      args[0].hasSkeleton = tpl
       return args
     }) 
   }
