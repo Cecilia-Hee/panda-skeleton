@@ -1,6 +1,6 @@
-<mxfile host="451403ee-0381-4ded-93e2-f233f282cb83" modified="2020-09-02T08:14:23.302Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.48.2 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36" etag="WRt1dPWb1f5catFRNwXH" version="13.1.3" pages="2">
+<mxfile host="7b8ccace-c8bc-4647-ba13-9822dd76fcb7" modified="2020-09-03T00:14:32.618Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.48.1 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36" etag="pn6VqxOua16xoC850FaX" version="13.1.3" pages="3">
     <diagram id="lZTjPE_rxs8lMhApN0eJ" name="第 2 页">
-        <mxGraphModel dx="919" dy="589" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+        <mxGraphModel dx="701" dy="445" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
             <root>
                 <mxCell id="YofQEZrLhi15AD0ChysG-0"/>
                 <mxCell id="YofQEZrLhi15AD0ChysG-1" parent="YofQEZrLhi15AD0ChysG-0"/>
@@ -98,192 +98,417 @@
         </mxGraphModel>
     </diagram>
     <diagram id="6hGFLwfOUW9BJ-s0fimq" name="Page-1">
+        &#xa;        
         <mxGraphModel dx="1183" dy="586" grid="1" gridSize="6" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+            &#xa;            
             <root>
+                &#xa;                
                 <mxCell id="0"/>
+                &#xa;                
                 <mxCell id="1" parent="0"/>
+                &#xa;                
                 <mxCell id="5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="3" target="4" edge="1">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="3" value="打开一个browser和page" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;gradientColor=#ea6b66;" parent="1" vertex="1">
+                    &#xa;                    
                     <mxGeometry x="100" y="60" width="120" height="60" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="4" target="6" edge="1">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="4" value="注入动态脚本&lt;br&gt;获取全局变量window.awesomeSkeleton" style="rounded=0;whiteSpace=wrap;html=1;gradientColor=#ea6b66;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    &#xa;                    
                     <mxGeometry x="100" y="200" width="120" height="60" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="6" target="8" edge="1">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="6" value="等待2000ms&lt;br&gt;确保执行完毕" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1">
+                    &#xa;                    
                     <mxGeometry x="100" y="340" width="120" height="60" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="8" target="10" edge="1">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="8" value="执行脚本上的代码&lt;br&gt;将页面转换为骨架屏" style="rounded=0;whiteSpace=wrap;html=1;gradientColor=#ea6b66;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    &#xa;                    
                     <mxGeometry x="100" y="480" width="120" height="60" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="10" target="12" edge="1">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="10" value="截图生成base64并存储到TXT中&lt;br&gt;同时生成png图片也存储" style="rounded=0;whiteSpace=wrap;html=1;gradientColor=#ea6b66;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    &#xa;                    
                     <mxGeometry x="100" y="620" width="120" height="60" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="12" value="生成可注入的HTML和CSS脚本，存入html文件中" style="rounded=0;whiteSpace=wrap;html=1;gradientColor=#ea6b66;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    &#xa;                    
                     <mxGeometry x="100" y="770" width="120" height="50" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="14" value="标红的5个都是重点步骤" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+                    &#xa;                    
                     <mxGeometry x="85" y="10" width="150" height="20" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="_COHS_uyOedo29i2Zg5Z-38" value="" style="group" vertex="1" connectable="0" parent="1">
+                    &#xa;                    
                     <mxGeometry x="948" y="36" width="516" height="868" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="_COHS_uyOedo29i2Zg5Z-37" value="" style="group" vertex="1" connectable="0" parent="_COHS_uyOedo29i2Zg5Z-38">
+                    &#xa;                    
                     <mxGeometry width="516" height="868" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-14" value="执行脚本" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#333333;fontColor=#333333;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" vertex="1">
+                    &#xa;                    
                     <mxGeometry x="196" width="120" height="60" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-15" value="通过getComputedStyle获取到元素的CSS属性，并排除掉不在第一屏的元素" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#333333;fontColor=#333333;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" vertex="1">
+                    &#xa;                    
                     <mxGeometry x="184" y="156" width="144" height="60" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#333333;fillColor=none;strokeColor=#333333;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" source="uqRNoB-qXwKnWtPRRlZf-14" target="uqRNoB-qXwKnWtPRRlZf-15" edge="1">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-17" value="预处理&lt;br&gt;【递归处理】" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;labelBackgroundColor=none;fontColor=#ffffff;" parent="_COHS_uyOedo29i2Zg5Z-37" vertex="1">
+                    &#xa;                    
                     <mxGeometry x="196" y="334" width="120" height="60" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#333333;fillColor=none;strokeColor=#333333;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" source="uqRNoB-qXwKnWtPRRlZf-15" target="uqRNoB-qXwKnWtPRRlZf-17" edge="1">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-24" value="处理各种节点" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#333333;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" vertex="1">
+                    &#xa;                    
                     <mxGeometry x="196" y="434" width="120" height="60" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#333333;fillColor=none;strokeColor=#333333;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" source="uqRNoB-qXwKnWtPRRlZf-17" target="uqRNoB-qXwKnWtPRRlZf-24" edge="1">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-37" value="list节点&lt;br&gt;包括ul\ol\dl" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#ffffff;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" vertex="1">
+                    &#xa;                    
                     <mxGeometry x="396" y="434" width="120" height="60" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#333333;fillColor=none;strokeColor=#000000;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" source="uqRNoB-qXwKnWtPRRlZf-24" target="uqRNoB-qXwKnWtPRRlZf-37" edge="1">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-39" value="获取到列表的子节点的长度，获取到li元素" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#333333;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" vertex="1">
+                    &#xa;                    
                     <mxGeometry x="396" y="529" width="120" height="60" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-40" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#333333;fillColor=none;strokeColor=#000000;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" source="uqRNoB-qXwKnWtPRRlZf-37" target="uqRNoB-qXwKnWtPRRlZf-39" edge="1">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-43" value="对于ul的子元素不是li的，直接获取第一个元素" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#333333;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" vertex="1">
+                    &#xa;                    
                     <mxGeometry x="396" y="614" width="120" height="60" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#333333;fillColor=none;strokeColor=#000000;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" source="uqRNoB-qXwKnWtPRRlZf-39" target="uqRNoB-qXwKnWtPRRlZf-43" edge="1">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-45" value="移除所有元素" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#333333;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" vertex="1">
+                    &#xa;                    
                     <mxGeometry x="396" y="704" width="120" height="60" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-46" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#333333;fillColor=none;strokeColor=#000000;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" source="uqRNoB-qXwKnWtPRRlZf-43" target="uqRNoB-qXwKnWtPRRlZf-45" edge="1">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-34" value="文本节点" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#ffffff;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" vertex="1">
+                    &#xa;                    
                     <mxGeometry x="196" y="529" width="120" height="60" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#333333;fillColor=none;strokeColor=#000000;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" source="uqRNoB-qXwKnWtPRRlZf-24" target="uqRNoB-qXwKnWtPRRlZf-34" edge="1">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="q_C0wTDVVipGc3KbLoxP-29" value="计算出文本的行数：&lt;br&gt;(节点高度-内边距 / 行高)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#333333;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" vertex="1">
+                    &#xa;                    
                     <mxGeometry x="196" y="622" width="120" height="60" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="q_C0wTDVVipGc3KbLoxP-30" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" parent="_COHS_uyOedo29i2Zg5Z-37" source="uqRNoB-qXwKnWtPRRlZf-34" target="q_C0wTDVVipGc3KbLoxP-29" edge="1">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="q_C0wTDVVipGc3KbLoxP-31" value="单行文本需要计算出文本内容的宽度" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#333333;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" vertex="1">
+                    &#xa;                    
                     <mxGeometry x="196" y="716" width="120" height="60" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="q_C0wTDVVipGc3KbLoxP-32" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" parent="_COHS_uyOedo29i2Zg5Z-37" source="q_C0wTDVVipGc3KbLoxP-29" target="q_C0wTDVVipGc3KbLoxP-31" edge="1">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="q_C0wTDVVipGc3KbLoxP-33" value="多行文本利用CSS的line-greadient实现条纹背景" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#333333;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" vertex="1">
+                    &#xa;                    
                     <mxGeometry x="196" y="808" width="120" height="60" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="q_C0wTDVVipGc3KbLoxP-34" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" parent="_COHS_uyOedo29i2Zg5Z-37" source="q_C0wTDVVipGc3KbLoxP-31" target="q_C0wTDVVipGc3KbLoxP-33" edge="1">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-26" value="其他节点" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#ffffff;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" vertex="1">
+                    &#xa;                    
                     <mxGeometry y="434" width="120" height="60" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#333333;fillColor=none;strokeColor=#000000;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" source="uqRNoB-qXwKnWtPRRlZf-24" target="uqRNoB-qXwKnWtPRRlZf-26" edge="1">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-28" value="伪元素文案和边框透明，背景色设置为特定颜色或灰色" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#333333;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" vertex="1">
+                    &#xa;                    
                     <mxGeometry y="808" width="120" height="50" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-19" value="排除掉不需要转换的元素，例如script，title，style等" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#333333;fontColor=#333333;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" vertex="1">
+                    &#xa;                    
                     <mxGeometry y="252" width="120" height="60" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-21" value="无特殊处理的节点背景图设置为none，并将背景色设置为灰色" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#333333;fontColor=#333333;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" vertex="1">
+                    &#xa;                    
                     <mxGeometry width="120" height="60" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="_COHS_uyOedo29i2Zg5Z-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" edge="1" parent="_COHS_uyOedo29i2Zg5Z-37" source="uqRNoB-qXwKnWtPRRlZf-23" target="uqRNoB-qXwKnWtPRRlZf-21">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-23" value="如果某个节点设置了特定的属性，则取其值为它的背景色" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#333333;fontColor=#333333;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" vertex="1">
+                    &#xa;                    
                     <mxGeometry y="84" width="120" height="60" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-30" value="button设置宽高，移除边框，背景色和文案颜色一致" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#333333;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" vertex="1">
+                    &#xa;                    
                     <mxGeometry y="600" width="120" height="50" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-31" value="默认img设置宽高，并用1px的base64填充，否则用颜色填充" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#333333;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" vertex="1">
+                    &#xa;                    
                     <mxGeometry y="666" width="120" height="50" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="_COHS_uyOedo29i2Zg5Z-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" edge="1" parent="_COHS_uyOedo29i2Zg5Z-37" source="uqRNoB-qXwKnWtPRRlZf-30" target="uqRNoB-qXwKnWtPRRlZf-31">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="_COHS_uyOedo29i2Zg5Z-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" edge="1" parent="_COHS_uyOedo29i2Zg5Z-37" source="uqRNoB-qXwKnWtPRRlZf-32" target="uqRNoB-qXwKnWtPRRlZf-28">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-32" value="特殊设置渐变背景的，单独处理为渐变色背景" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#333333;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" vertex="1">
+                    &#xa;                    
                     <mxGeometry y="738" width="120" height="50" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="_COHS_uyOedo29i2Zg5Z-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" edge="1" parent="_COHS_uyOedo29i2Zg5Z-37" source="uqRNoB-qXwKnWtPRRlZf-31" target="uqRNoB-qXwKnWtPRRlZf-32">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="_COHS_uyOedo29i2Zg5Z-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" edge="1" parent="_COHS_uyOedo29i2Zg5Z-37" source="uqRNoB-qXwKnWtPRRlZf-33" target="uqRNoB-qXwKnWtPRRlZf-30">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-33" value="svg设置宽高，并移除内容，用背景色填充" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#333333;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" vertex="1">
+                    &#xa;                    
                     <mxGeometry y="529" width="120" height="50" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="_COHS_uyOedo29i2Zg5Z-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" edge="1" parent="_COHS_uyOedo29i2Zg5Z-37" source="uqRNoB-qXwKnWtPRRlZf-26" target="uqRNoB-qXwKnWtPRRlZf-33">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="_COHS_uyOedo29i2Zg5Z-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" edge="1" parent="_COHS_uyOedo29i2Zg5Z-37" source="_COHS_uyOedo29i2Zg5Z-15" target="uqRNoB-qXwKnWtPRRlZf-19">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="_COHS_uyOedo29i2Zg5Z-15" value="根据元素将其分类，便于后面单独处理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#333333;fontColor=#333333;labelBackgroundColor=none;" vertex="1" parent="_COHS_uyOedo29i2Zg5Z-37">
+                    &#xa;                    
                     <mxGeometry y="334" width="120" height="60" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="_COHS_uyOedo29i2Zg5Z-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" edge="1" parent="_COHS_uyOedo29i2Zg5Z-37" source="uqRNoB-qXwKnWtPRRlZf-17" target="_COHS_uyOedo29i2Zg5Z-15">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="_COHS_uyOedo29i2Zg5Z-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" edge="1" parent="_COHS_uyOedo29i2Zg5Z-37" source="uqRNoB-qXwKnWtPRRlZf-22" target="uqRNoB-qXwKnWtPRRlZf-23">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="uqRNoB-qXwKnWtPRRlZf-22" value="去掉元素的阴影和边框，将文字颜色设置为透明" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#333333;fontColor=#333333;labelBackgroundColor=none;" parent="_COHS_uyOedo29i2Zg5Z-37" vertex="1">
+                    &#xa;                    
                     <mxGeometry y="168" width="120" height="60" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="_COHS_uyOedo29i2Zg5Z-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" edge="1" parent="_COHS_uyOedo29i2Zg5Z-37" source="uqRNoB-qXwKnWtPRRlZf-19" target="uqRNoB-qXwKnWtPRRlZf-22">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="_COHS_uyOedo29i2Zg5Z-34" value="复制第一个元素，并用第一个子元素重复渲染填充列表" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#333333;labelBackgroundColor=none;" vertex="1" parent="_COHS_uyOedo29i2Zg5Z-37">
+                    &#xa;                    
                     <mxGeometry x="396" y="803" width="120" height="60" as="geometry"/>
+                    &#xa;                
                 </mxCell>
+                &#xa;                
                 <mxCell id="_COHS_uyOedo29i2Zg5Z-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" edge="1" parent="_COHS_uyOedo29i2Zg5Z-37" source="uqRNoB-qXwKnWtPRRlZf-45" target="_COHS_uyOedo29i2Zg5Z-34">
+                    &#xa;                    
                     <mxGeometry relative="1" as="geometry"/>
+                    &#xa;                
+                </mxCell>
+                &#xa;            
+            </root>
+            &#xa;        
+        </mxGraphModel>
+        &#xa;    
+    </diagram>
+    <diagram id="PINmafVCzKBpagSAW6Gy" name="vue-skeleton-webpack-plugin">
+        <mxGraphModel dx="765" dy="408" grid="1" gridSize="4" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="zZaMQnNQrN7DAlVb3Q6D-0"/>
+                <mxCell id="zZaMQnNQrN7DAlVb3Q6D-1" parent="zZaMQnNQrN7DAlVb3Q6D-0"/>
+                <mxCell id="zZaMQnNQrN7DAlVb3Q6D-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1A1A1A;labelBackgroundColor=#ffffff;fontColor=#000000;" edge="1" parent="zZaMQnNQrN7DAlVb3Q6D-1" source="zZaMQnNQrN7DAlVb3Q6D-2" target="zZaMQnNQrN7DAlVb3Q6D-3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="zZaMQnNQrN7DAlVb3Q6D-2" value="创建服务端渲染入口" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#1A1A1A;fillColor=none;labelBackgroundColor=#ffffff;fontColor=#000000;" vertex="1" parent="zZaMQnNQrN7DAlVb3Q6D-1">
+                    <mxGeometry x="40" y="72" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="zZaMQnNQrN7DAlVb3Q6D-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#ffffff;strokeColor=#1A1A1A;fontColor=#000000;" edge="1" parent="zZaMQnNQrN7DAlVb3Q6D-1" source="zZaMQnNQrN7DAlVb3Q6D-3" target="zZaMQnNQrN7DAlVb3Q6D-9">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="zZaMQnNQrN7DAlVb3Q6D-3" value="创建服务端渲染的webpack配置" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#1A1A1A;fillColor=none;labelBackgroundColor=#ffffff;fontColor=#000000;" vertex="1" parent="zZaMQnNQrN7DAlVb3Q6D-1">
+                    <mxGeometry x="200" y="72" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="zZaMQnNQrN7DAlVb3Q6D-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1A1A1A;labelBackgroundColor=#ffffff;fontColor=#000000;" edge="1" parent="zZaMQnNQrN7DAlVb3Q6D-1" source="zZaMQnNQrN7DAlVb3Q6D-4" target="zZaMQnNQrN7DAlVb3Q6D-5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="zZaMQnNQrN7DAlVb3Q6D-4" value="得到骨架屏bundle文件，并转化成字符串" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#1A1A1A;fillColor=none;labelBackgroundColor=#ffffff;fontColor=#000000;" vertex="1" parent="zZaMQnNQrN7DAlVb3Q6D-1">
+                    <mxGeometry x="516" y="72" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="zZaMQnNQrN7DAlVb3Q6D-5" value="在html-webpack-plugin的事件中注入到入口文件中" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#1A1A1A;fillColor=#ffffff;labelBackgroundColor=#ffffff;fontColor=#000000;" vertex="1" parent="zZaMQnNQrN7DAlVb3Q6D-1">
+                    <mxGeometry x="672" y="72" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="zZaMQnNQrN7DAlVb3Q6D-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#ffffff;strokeColor=#1A1A1A;fontColor=#000000;" edge="1" parent="zZaMQnNQrN7DAlVb3Q6D-1" source="zZaMQnNQrN7DAlVb3Q6D-9" target="zZaMQnNQrN7DAlVb3Q6D-4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="zZaMQnNQrN7DAlVb3Q6D-9" value="为应用注入路由" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#1A1A1A;fillColor=none;labelBackgroundColor=#ffffff;fontColor=#000000;" vertex="1" parent="zZaMQnNQrN7DAlVb3Q6D-1">
+                    <mxGeometry x="356" y="72" width="120" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
