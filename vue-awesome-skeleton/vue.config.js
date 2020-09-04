@@ -7,8 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const autoSkeleton = require('./auto-skeleton/index')
 
 let tpl = ''
-
-autoSkeleton(['user'], 'hash', function(res) {
+autoSkeleton(['home', 'user', 'detail'], 'hash', function(res) {
   console.log("==================")
   tpl = res;
 })

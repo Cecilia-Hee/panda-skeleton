@@ -2,7 +2,7 @@
  * @Author: Helijun
  * @Date: 2020-07-31 15:35:48
  * @LastEditors: Helijun
- * @LastEditTime: 2020-09-03 19:04:52
+ * @LastEditTime: 2020-09-04 16:27:44
  * @Description: 首页
 --> 
 <template>
@@ -112,7 +112,9 @@ export default {
     getRecomendList() {
       axios.get(`${baseUrl}/personalized`).then((res) => {
         const { result } = res && res.data
-        this.recommendList = result;
+        this.recommendList = result;      
+      }).finally(() => {
+        window.SKELETON && window.SKELETON.destroy()
       })
     },
 

@@ -2,7 +2,7 @@
  * @Author: Helijun
  * @Date: 2020-08-10 14:27:49
  * @LastEditors: Helijun
- * @LastEditTime: 2020-08-10 18:53:14
+ * @LastEditTime: 2020-09-04 16:28:26
  * @Description: 
 --> 
 <template>
@@ -82,6 +82,8 @@ export default {
         // console.log(res)
         const {profile} = res && res.data
         this.profile = profile
+      }).finally(() => {
+        window.SKELETON && window.SKELETON.destroy()
       })
     },
     getPlayList() {
@@ -89,6 +91,8 @@ export default {
         // console.log(res)
         const { playlist } = res && res.data
         this.playList = playlist
+      }).finally(() => {
+        window.SKELETON && window.SKELETON.destroy()
       })
     },
     gotoIndex() {

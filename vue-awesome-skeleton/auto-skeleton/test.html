@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test</title>
+</head>
+
+<body>
+  <style>
+    @keyframes flush {
+      0% {
+        left: -100%;
+      }
+
+      50% {
+        left: 0;
+      }
+
+      100% {
+        left: 100%;
+      }
+    }
+  </style>
+
+  <div class="skeleton-remove-after-first-request" style="
+  animation: flush 2s linear infinite;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 9999;
+  background: linear-gradient(to left,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, .85) 50%,
+    rgba(255, 255, 255, 0) 100%);
+  "></div>
+
+  <div class="skeleton-remove-after-first-request" id="home">
+  </div>
+
+  <div class="skeleton-remove-after-first-request" id="user">   
+  </div>
+
+  <script class="skeleton-remove-after-first-request">
+    // 判断路由
+    var pathname = window.location.pathname;
+    var hash = window.location.hash;
+
+    var isMatched = function (pathReg, mode) { 
+      return "hash" === mode 
+      ? pathReg.test(hash.replace("#", "")) 
+      : "history" === mode && pathReg.test(pathname) };
+      
+     var showSkeleton = function (skeletonId) { 
+      for (var t = 0; t < skeletons.length; t++) { 
+        var o = skeletons[t]; 
+        skeletonId === o.id ? o.el.style = "display:block;" : o.el.style = "display:none;" } 
+     }; 
+
+     isMatched(/^\/home(?:\/)?/i, "hash") 
+      ? showSkeleton("home") 
+      : isMatched(/^\/user(?:\/)?/i, "hash") && showSkeleton("user");
+
+      window.SKELETON = {
+        destroy: function () { // Manually destroy the skeleton
+          var removes = Array.from(document.body.querySelectorAll('skeleton-remove-after-first-request'));
+          removes && removes.map(function(item){
+            document.body.removeChild(item);
+          });
+        }
+      };
+
+      // destroy after the onload event by default
+      window.addEventListener('load', function(){
+        setTimeout(function(){
+          window.SKELETON && SKELETON.destroy()
+        }, 0);
+      });
+  </script>
+</body>
+
+</html>
