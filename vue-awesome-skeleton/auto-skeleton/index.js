@@ -40,6 +40,15 @@ function getContent(skeletons, mode) {
     skeletonsRoutes.push({id: `${item.id}`}); 
   })
 
+  // 如果不是这个需要骨架屏的页面，就直接移除掉
+  const matchElse = ` else {
+    setTimeout(function(){
+      window.SKELETON && SKELETON.destroy()
+    }, 0);
+  }`
+
+  matchList.push(matchElse)
+
 
   // console.log(skeletonDomList)
   // console.log(isMatchList)
@@ -117,6 +126,7 @@ function getContent(skeletons, mode) {
     };
 
     // destroy after the onload event by default
+    // 其他地方可手动调用
     // window.addEventListener('load', function(){
     //   setTimeout(function(){
     //     window.SKELETON && SKELETON.destroy()
