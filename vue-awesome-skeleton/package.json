@@ -10,7 +10,7 @@
     "skeleton": "skeleton -c ./skeleton.config.js -- --pagename=pagename --pageurl=pageurl"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "lofter-awesome-skeleton": "0.0.12",
     "puppeteer": "^1.2.0",
